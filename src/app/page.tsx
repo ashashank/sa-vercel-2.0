@@ -1,113 +1,53 @@
-import Image from "next/image";
+import React from 'react';
+import Card from './Card';
+export default function Page() {
+  const questions = [
+    { title: "Question 1", name: "5 most favourite and 5 least favourite support tasks", link: "https://docs.google.com/document/d/1RwyfDqnfLgWRoNaz7Iv32huraIVSO6J4co3stowHpC8/edit?usp=sharing" },
+    { title: "Question 2", name: "What do you want to learn or do more of at work?", link: "https://docs.google.com/document/d/1SLSxQgTZXRcIWbQtD65m4czr_VImkC5IPc34WA1d9w0/edit?usp=sharing" },
+    { title: "Question 3", name: "How you solved a challenge in a previous role?", link: "https://docs.google.com/document/d/1nvJQm5MyP_rdBQCVgGJa6GBnZM2yaBse5AkqGmVNb_w/edit?usp=sharing" },
+    { title: "Question 4", name: "Edge Functions, Serverless Functions, or Edge Middleware with Vercel", link: "https://docs.google.com/document/d/1qa4N3CfLWjhp1EcelgYiB4QY1frCS0nzyfKGXtsEC14/edit?usp=sharing" },
+    { title: "Question 5", name: "Troubleshooting a build issue that you've not seen before.", link: "https://docs.google.com/document/d/1J6If1TgMsj2XLKfMZ5LZW375fIDX1x7JSn5I6SZ5d7w/edit?usp=sharing" },
+    { title: "Question 6", name: "Follow-up reply to the frustrated customer.", link: "https://docs.google.com/document/d/1PbmoQ_9c6yq6DM2NF4h-fIi5o0iOijJHxQ1DJWipZSo/edit?usp=sharing" },
+    { title: "Question 7", name: "Email to redirect from the /blog path to https://example.com", link: "https://docs.google.com/document/d/1xicZfY3fhQePewOMJme7yEleH2YGrXBQZr6KLQ62bNY/edit?usp=sharing" },
+    { title: "Question 8", name: "Request for project not to be indexed by search engines", link: "https://docs.google.com/document/d/1ag-djUp5ETliEwRvLDDprUF91FBseM5RnL1G0u7T4f0/edit?usp=sharing" },
+    { title: "Question 9", name: "Most common problems which customers ask Vercel for help with", link: "https://docs.google.com/document/d/1VP6wq9Fy9JPVltIKT1hzUWyJcRRrBI1dHVLkZ8ojQkI/edit?usp=sharing" },
+    { title: "Question 10", name: "How could familiarisation exercise be improved?", link: "https://docs.google.com/document/d/16AjCcwawBUReHgm0GLQeSUzU5ewC2bfCmTEcXP8wd04/edit?usp=sharing" },
 
-export default function Home() {
+  ]; 
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+    <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white">
+      <h1 className="text-4xl font-bold mb-8">
+    <a 
+          href="https://docs.google.com/document/d/18f_PBlVroWoZJovmbmboISj3_veA39P4Weikg323Few/edit?usp=sharing" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          Shashank Ambekar's Vercel Exercise (Consolidated document)
+        </a>
+    </h1>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {questions.map((question, index) => (
+        <Card key={index} title={question.title} name={question.name} link={question.link} />
+      ))}
+    </div>
+    <footer className="w-full absolute bottom-0 flex flex-col items-center justify-center py-4 px-8 bg-gray-800 text-white">
+        <p>Developed by - Shashank Ambekar</p>
+        <div className="flex mt-2 space-x-4">
+          <a href="tel:+91-7757826306" className="text-blue-500 hover:underline">
+            Phone: +91-7757826306
+          </a>
+          <a href="https://www.linkedin.com/in/shashank-ambekar-6ab946b2/" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <a href="https://github.com/stacksimplify" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+            GitHub Project
           </a>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </footer>
+  </main>
   );
+
 }
+
