@@ -17,7 +17,7 @@ export default function Page() {
   ]; 
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white">
+    <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-center bg-black text-white">
       <h1 className="text-4xl font-bold mb-8">
     <a 
           href="https://docs.google.com/document/d/18f_PBlVroWoZJovmbmboISj3_veA39P4Weikg323Few/edit?usp=sharing" 
@@ -33,7 +33,7 @@ export default function Page() {
         <Card key={index} title={question.title} name={question.name} link={question.link} />
       ))}
     </div>
-    <footer className="w-full absolute bottom-0 flex flex-col items-center justify-center py-4 px-8 bg-gray-800 text-white">
+    <footer className="w-full fixed bottom-0 left-0 flex flex-col items-center justify-center py-4 px-8 bg-gray-800 text-white">
         <p>Developed by - Shashank Ambekar</p>
         <div className="flex mt-2 space-x-4">
           <a href="tel:+91-7757826306" className="text-blue-500 hover:underline">
