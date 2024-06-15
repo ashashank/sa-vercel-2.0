@@ -1,5 +1,6 @@
-import React from 'react';
-import Card from './Card';
+import React from "react";
+import Card from "./Card";
+/* eslint-disable */
 export default function Page() {
   const questions = [
     { title: "Question 1", name: "5 most favourite and 5 least favourite support tasks", link: "https://docs.google.com/document/d/1RwyfDqnfLgWRoNaz7Iv32huraIVSO6J4co3stowHpC8/edit?usp=sharing" },

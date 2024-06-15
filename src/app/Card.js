@@ -1,5 +1,5 @@
 // components/Card.js
-import styles from './Card.module.css';
+import styles from "./Card.module.css";
 
 const Card = ({ title, name, link }) => {
   return (
