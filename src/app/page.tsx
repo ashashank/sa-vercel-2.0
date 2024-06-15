@@ -41,7 +41,7 @@ export default function Page() {
           <a href="https://www.linkedin.com/in/shashank-ambekar-6ab946b2/" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-          <a href="https://github.com/stacksimplify" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/ashashank/sa-vercel" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
             GitHub Project
           </a>
         </div>
