@@ -8,13 +8,19 @@ import Modal from "react-modal";
 /* eslint-disable */
 
 const findOrCreateAppElement : any = () => {
+  if(typeof document!= "undefined")
+    {
   const existingElement = document.querySelector('#__next');
+
   if (existingElement) return existingElement;
 
   const fallbackElement = document.createElement('div');
   fallbackElement.id = '__next';
   document.body.appendChild(fallbackElement);
   return fallbackElement;
+    }
+
+    return null;
 };
 
 Modal.setAppElement(findOrCreateAppElement());
