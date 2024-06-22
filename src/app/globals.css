@@ -32,3 +32,23 @@ body {
     text-wrap: balance;
   }
 }
+
+.answermodal {
+  z-index: 10000;
+    position: absolute;
+    color: black;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 80%;
+    height: 80vh;
+
+  }
+
+  .myoverlay
+  {
+    filter: blur(3px);
+    opacity: .6;
+  }

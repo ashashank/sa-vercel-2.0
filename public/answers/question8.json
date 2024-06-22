@@ -1,0 +1,3 @@
+{
+  "answer": "Hi [Customer Name], Thank you for your question! If you want to prevent your Vercel project from being indexed by search engines, you can achieve this by using a ‘robots.txt’ file. Based on this help document, the best way to ensure your site is not indexed is to create a robots.txt file and add the following lines inside: User-agent: * Disallow: / Vercel Deployment Considerations: After adding the ‘robots.txt’ file, redeploy your project to ensure the changes take effect on the live site. For Preview Deployments, Vercel automatically adds a 'X-Robots-Tag: noindex' header to prevent search engines from indexing your project while it's under development."
+}

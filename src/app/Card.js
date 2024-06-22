@@ -1,7 +1,7 @@
 // components/Card.js
 import styles from "./Card.module.css";
 
-const Card = ({ title, name, link }) => {
+const Card = ({ title, name, onExplore }) => {
   return (
     <div className={`p-4 max-w-xs w-full bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300`}>
       
@@ -19,9 +19,12 @@ const Card = ({ title, name, link }) => {
      
         
       <div className="mt-4">
-        <a href={link} className="block w-full text-center bg-blue-500 text-white rounded py-2 px-4 hover:bg-blue-600 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
-          Explore
-        </a>
+      <button
+        onClick={onExplore}
+        className="bg-blue-500 text-white px-4 py-2 rounded w-full"
+      >
+        Explore
+      </button>
       </div>
 
     </div>
