@@ -7,7 +7,7 @@ import Modal from "react-modal";
 
 /* eslint-disable */
 
-const findOrCreateAppElement = () => {
+const findOrCreateAppElement : any = () => {
   const existingElement = document.querySelector('#__next');
   if (existingElement) return existingElement;
 
